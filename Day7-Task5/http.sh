@@ -1,14 +1,12 @@
 #!/bin/bash
 
-read -p "Enter website url:" URL
-
-http_code=$(curl --write-out %{http_code} --slient --output /dev/null $URL)
-
+read -p "Enter the Website Url:" URL
+http_code=$(curl --write-out %{http_code} -s --output /dev/null/ $URL)
 if [ $http_code -eq 200 ]
 then
-echo "Success"
+	echo "Success"
 else 
-echo "Connection Failed"
+	echo "Connection Failed"
 
 fi
 
