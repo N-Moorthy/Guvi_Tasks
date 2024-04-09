@@ -1,0 +1,10 @@
+version: '3'
+services:
+ nginxcontainer:
+  image: mynginximg
+  ports:
+   - 3000:80
+  volumes:
+   - nginx-vol:/var/opt/nginx
+volumes:
+  nginx-vol:
